@@ -1,21 +1,23 @@
 {
-    "name": "react-native-modal-provider",
-    "version": "1.0.0",
-    "description": "A React Native modal provider component",
-    "main": "src/provider.tsx",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Thor Lindberg",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/thordotcomputer/react-native-modal-provider.git"
-    },
-    "keywords": [
-      "react-native",
-      "modal",
-      "provider"
-    ],
-    "license": "MIT"
-  }
-  
+  "name": "react-native-modal-provider",
+  "version": "1.0.0",
+  "description": "Context Provider for pushing modals of varying detents above the wrapped Nodes.",
+  "main": "src/provider.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thordotcomputer/react-native-modal-provider.git"
+  },
+  "keywords": [
+    "react-native",
+    "modal"
+  ],
+  "author": "Thor Lindberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thordotcomputer/react-native-modal-provider/issues"
+  },
+  "homepage": "https://github.com/thordotcomputer/react-native-modal-provider#readme"
+}
