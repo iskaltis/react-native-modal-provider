@@ -101,7 +101,7 @@ const Provider = ({children, backgroundColor}: ModalProviderProps) => {
   );
 };
 
-const ModalProvider = ({
+export const ModalProvider = ({
   children,
   backgroundColor,
   debug,
@@ -113,4 +113,4 @@ const ModalProvider = ({
   );
 };
 
-export default ModalProvider;
+export {useModal};
