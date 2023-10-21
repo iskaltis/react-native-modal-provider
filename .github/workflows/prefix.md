@@ -1,1 +1,0 @@
-# React Native Modal Provider
