@@ -31,8 +31,6 @@ export const useModal = () => {
   const {state, setState, log} = React.useContext(Context);
 
   const openModal = (content: ModalState) => {
-    setState(initialState);
-    log('[LOG] ModalProvider has been reset.');
     setState({
       ...state,
       ...content,
