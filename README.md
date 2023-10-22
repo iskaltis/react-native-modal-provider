@@ -2,25 +2,26 @@
 
 React Native Modal Provider is a flexible and customizable modal provider for React Native applications. It allows you to easily manage modals with different detents (small, medium, large) while providing a smooth and visually appealing user experience.
 
-![Animated photo of the Modal Provider.](gif.gif)
+![Animated photo of the Modal Provider.](img/gif.gif)
 
 ## Installation
 
 To install the React Native Modal Provider in your project, follow these steps:
 
-1. Add the package to your project using:
+### 1. Add the package to your project using:
+
+#### NPM
 
 ```bash
 npm install git+https://github.com/thordotcomputer/react-native-modal-provider.git
 ```
-
-or
+#### Yarn
 
 ```bash
 yarn add git+https://github.com/thordotcomputer/react-native-modal-provider.git
 ```
 
-2. Import and use the Modal Provider in your React Native code:
+### 2. Import and use the ModalProvider in your React Native code:
 
 ```javascript
 import { ModalProvider } from 'react-native-modal-provider';
@@ -100,6 +101,15 @@ These examples demonstrate how to use each function provided by the React Native
 ## Customization
 
 The Modal Provider is highly customizable. You can adjust the appearance and behavior of modals by modifying the provided styles, or by creating your own components and using the context.
+
+### `Detent`
+
+|             |                                                                      |                                                             |     |
+| ----------- | -------------------------------------------------------------------- | ----------------------------------------------------------- | --- |
+| `undefined` | Modal can't be shown with an unitialized detent                      | ![Animated photo of the Modal Provider.](img/undefined.png) |     |
+| `'small'`   | Used for brief interactions that shouldn't obscure content.          | ![Animated photo of the Modal Provider.](img/small.png)     |     |
+| `'medium'`  | Used to obscure content without erasing the context.                 | ![Animated photo of the Modal Provider.](img/medium.png)    |     |
+| `'large'`   | Used to obscure both content and context for in-depth inexperiences. | ![Animated photo of the Modal Provider.](img/large.png)     |     |
 
 ## API Reference
 
