@@ -20,12 +20,13 @@ export interface RoundedProps {
   borderColor?: string;
 }
 
-export type DetentProps = 'small' | 'medium' | 'large';
+export type DetentProps = 'small' | 'medium' | 'large' | undefined;
 
 export type ModalState = {
   isPresented?: boolean;
   detent?: DetentProps;
   node?: React.ReactNode;
+  statusBarColor?: 'light-content' | 'dark-content';
 };
 
 export interface ModalProviderProps {

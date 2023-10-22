@@ -83,14 +83,9 @@ const Provider = ({children, backgroundColor}: ModalProviderProps) => {
         transparent={true}
         visible={modalState.isPresented}>
         <SafeAreaView style={styles.safeAreaModal}>
-          <StatusBar
-            animated
-            barStyle={
-              modalState.isPresented && modalState.detent === 'large'
-                ? 'dark-content'
-                : 'light-content'
-            }
-          />
+          {modalState.isPresented && modalState.detent === 'large' && (
+            <StatusBar animated barStyle={modalState.statusBarColor} />
+          )}
           <View style={styles.bufferStyle} />
           <Rounded radius={8} style={styles.maskStyle}>
             {modalState.node}
