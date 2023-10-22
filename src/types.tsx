@@ -23,8 +23,8 @@ export interface RoundedProps {
 export type DetentProps = 'small' | 'medium' | 'large';
 
 export type ModalState = {
-  isPresented: boolean;
-  detent: DetentProps;
+  isPresented?: boolean;
+  detent?: DetentProps;
   node?: React.ReactNode;
 };
 
