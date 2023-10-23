@@ -1,5 +1,12 @@
 import React, {useRef, useEffect} from 'react';
-import {StatusBar, Modal, View, Animated, Dimensions} from 'react-native';
+import {
+  StatusBar,
+  Modal,
+  View,
+  Animated,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
 import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
 import {ModalProviderProps, RoundedProps} from './types';
 import useStyle from './styles';
@@ -19,7 +26,7 @@ const Rounded = ({children, radius, style}: RoundedProps) => {
 };
 
 const Provider = ({children, backgroundColor}: ModalProviderProps) => {
-  const {readModal} = useModal();
+  const {readModal, closeModal} = useModal();
   const modalState = readModal();
   const safeAreaInsets = useSafeAreaInsets();
   const styles = useStyle(modalState.detent, backgroundColor);
@@ -83,10 +90,8 @@ const Provider = ({children, backgroundColor}: ModalProviderProps) => {
         transparent={true}
         visible={modalState.isPresented}>
         <SafeAreaView style={styles.safeAreaModal}>
-          {modalState.isPresented && modalState.detent === 'large' && (
-            <StatusBar animated barStyle={modalState.statusBarColor} />
-          )}
-          <View style={styles.bufferStyle} />
+          <StatusBar animated barStyle={modalState.statusBarColor} />
+          <TouchableOpacity onPress={closeModal} style={styles.bufferStyle} />
           <Rounded radius={8} style={styles.maskStyle}>
             {modalState.node}
           </Rounded>
