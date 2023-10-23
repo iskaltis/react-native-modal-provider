@@ -15,7 +15,7 @@ const useStyle = (detent: DetentProps, backgroundColor: string = 'black') => {
       backgroundColor: backgroundColor,
     },
     safeAreaModal: {
-      flex: 1,
+      flex: detent === 'small' ? 'auto' : 1,
       marginTop: detent === 'medium' ? safeAreaInsets.top + 12 : 0,
     },
     maskStyle: {
