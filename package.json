@@ -1,6 +1,6 @@
 {
   "name": "react-native-modal-provider",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Context Provider for pushing modals of varying detents above the wrapped Nodes.",
   "main": "src/provider.tsx",
   "scripts": {
